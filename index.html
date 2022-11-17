@@ -278,7 +278,8 @@
 					context.fill();
 					// create the image
 					var image = new Image();
-					image.src = canvas.toDataURL();
+					// image.src = canvas.toDataURL();
+					image.src = "https://img.icons8.com/external-basicons-color-edtgraphics/32/external-Pig-animals-basicons-color-edtgraphics-3.png"
 					return image;
 				})();
 
@@ -288,12 +289,13 @@
 					requestAnimationFrame(render);
 
 					// update time
-					var newTime = new Date().getTime() / 1000,
+					var newTime = new Date().getTime() / 1500,
 						deltaTime = newTime - (time || newTime);
 					time = newTime;
 
 					// clear canvas
 					context.clearRect(0, 0, canvas.width, canvas.height);
+					
 
 					// create new particles
 					var amount = particleRate * deltaTime;
